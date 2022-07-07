@@ -109,6 +109,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+.idea/
 
 # Spyder project settings
 .spyderproject
@@ -127,3 +128,11 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+
+# Tob worked on later
+sphinx_open_needs/extensions
+sphinx_open_needs/scripts
+sphinx_open_needs/services
+sphinx_open_needs/config.py
+sphinx_open_needs/license.py
