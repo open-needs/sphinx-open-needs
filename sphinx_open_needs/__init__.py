@@ -1,1 +1,1 @@
-from sphinx_open_needs.sne import setup  # NOQA
+from sphinx_open_needs.son import setup  # NOQA

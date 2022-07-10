@@ -22,8 +22,8 @@ sys.path.insert(0, os.path.abspath("../sphinx_open_needs"))
 # -- Project information -----------------------------------------------------
 
 project = 'Sphinx-Open-Needs'
-copyright = '2022, team useblocks'
-author = 'team useblocks'
+copyright = "2022, Open-Needs community"
+author = "Open-Needs community"
 
 # The full version, including alpha/beta/rc tags
 version = VERSION
@@ -38,9 +38,8 @@ extensions = [
     "sphinx.ext.intersphinx",
     "sphinx.ext.ifconfig",
     "sphinxcontrib.needs",
-    "sphinx_needs_enterprise",
+    "sphinx_open_needs",
     "sphinx_design",
-    "sphinxcontrib.programoutput",
     "sphinx_copybutton",
     "sphinx_immaterial",
 
@@ -48,22 +47,23 @@ extensions = [
 
 intersphinx_mapping = {"needs": ("https://sphinxcontrib-needs.readthedocs.io/en/latest/", None)}
 
-ons_server = "http://127.0.0.1:9595"
+# ons_server = "http://127.0.0.1:9595"
+#
+# ons_content = """
+# {{data.description}}"""
 
-ons_content = """
-{{data.description}}"""
+# needs_extra_options = ["author"]
 
-needs_extra_options = ["author"]
-
-needs_types = [
-    dict(directive="req", title="Requirement", prefix="R_", color="#BFD8D2", style="node"),
-    dict(directive="spec", title="Specification", prefix="S_", color="#FEDCD2", style="node"),
-    dict(directive="impl", title="Implementation", prefix="I_", color="#DF744A", style="node"),
-    dict(directive="test", title="Test Case", prefix="T_", color="#DCB239", style="node"),
-    dict(directive="task", title="Task", prefix="T_", color="#DCB239", style="node"),
-    # Kept for backwards compatibility
-    dict(directive="need", title="Need", prefix="N_", color="#9856a5", style="node"),
-]
+# needs_types = [
+#     dict(directive="req", title="Requirement", prefix="R_", color="#BFD8D2", style="node"),
+#     dict(directive="spec", title="Specification", prefix="S_", color="#FEDCD2", style="node"),
+#     dict(directive="impl", title="Implementation", prefix="I_", color="#DF744A", style="node"),
+#     dict(directive="test", title="Test Case", prefix="T_", color="#DCB239", style="node"),
+#     dict(directive="task", title="Task", prefix="T_", color="#DCB239", style="node"),
+#     # Kept for backwards compatibility
+#     dict(directive="need", title="Need", prefix="N_", color="#9856a5", style="node"),
+# ]
+#
 
 
 def rstjinja(app, docname, source):
@@ -119,7 +119,7 @@ html_theme_options = {
     "icon": {
         "repo": "fontawesome/brands/github",
     },
-    "site_url": "https://useblocks.com/sphinx-needs-enterprise/",
+    "site_url": "https://open-needs.org/sphinx-open-needs",
     "repo_url": "https://github.com/open-needs/sphinx-open-needs",
     "repo_name": "Sphinx-Open-Needs",
     "repo_type": "github",
@@ -134,8 +134,8 @@ html_theme_options = {
         {
             "media": "(prefers-color-scheme: light)",
             "scheme": "default",
-            "primary": "blue",
-            "accent": "light-blue",
+            "primary": "black",
+            "accent": "indigo",
             "toggle": {
                 "icon": "material/weather-night",
                 "name": "Switch to dark mode",
@@ -144,8 +144,8 @@ html_theme_options = {
         {
             "media": "(prefers-color-scheme: dark)",
             "scheme": "slate",
-            "primary": "blue",
-            "accent": "yellow",
+            "primary": "white",
+            "accent": "indigo",
             "toggle": {
                 "icon": "material/weather-sunny",
                 "name": "Switch to light mode",
@@ -176,3 +176,7 @@ rst_epilog = """
    <br>
 
 """
+
+html_last_updated_fmt = ""
+html_use_index = False
+html_domain_indices = False
